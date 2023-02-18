@@ -3,10 +3,14 @@
         <title>Deneme</title>
     </head>
     <body>
-        Merhaba Dünya.
+        <input type="number"/>
+        <input type="number"/>
+        <div id="sonuc"></div>
         <script>
-            var deneme = 1;
-            console.log("Satır 9:", deneme);
+            document.getElementById("sonuc").style.width = "500px";
+            document.getElementById("sonuc").style.height = "500px";
+            document.getElementById("sonuc").style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+            console.log(Math.random() * 255);
         </script>
     </body>
 </html>
