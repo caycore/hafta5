@@ -14,26 +14,12 @@ function hesapla(type) {
     }
 }
 
-function test(ilksayi, ikincisayi, ucuncusayi, dorduncusayi) {
+function test(iksayi, ikincisayi, ...params) {
     var sonuc = 0;
-
-    if(ilksayi) {
-        sonuc += ilksayi;
-    }
-
-    if(ikincisayi) {
-        sonuc += ikincisayi;
-    }
-
-    if(ucuncusayi) {
-        sonuc += ucuncusayi;
-    }
-
-    if(dorduncusayi) {
-        sonuc += dorduncusayi;
-    }
-
+    params.forEach(item => {
+        sonuc += item;
+    });
     alert(sonuc);
 }
 
-test(0, 3, 1);
+test(10, 20, 30, 40, 50, 60);
