@@ -14,12 +14,15 @@ function hesapla(type) {
     }
 }
 
-function test(iksayi, ikincisayi, ...params) {
+function test(...params) {
     var sonuc = 0;
     params.forEach(item => {
         sonuc += item;
     });
-    alert(sonuc);
+    return sonuc;
 }
-
-test(10, 20, 30, 40, 50, 60);
+var newResult = test(10, 20, 30, 40, 50, 60);
+alert(newResult);
+newResult = test(50, 60);
+console.log(test(50, 100, 250));
+alert(newResult);
