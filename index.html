@@ -3,14 +3,17 @@
         <title>Deneme</title>
     </head>
     <body>
-        <input type="number"/>
-        <input type="number"/>
+        <input id="sayi1" type="number"/>
+        <input id="sayi2" type="number"/>
+        <button onclick="topla()">Topla</button>
         <div id="sonuc"></div>
         <script>
-            document.getElementById("sonuc").style.width = "500px";
-            document.getElementById("sonuc").style.height = "500px";
-            document.getElementById("sonuc").style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-            console.log(Math.random() * 255);
+            function topla() {
+                var sayi1 = document.getElementById("sayi1").value;
+                var sayi2 = document.getElementById("sayi2").value;
+                var sonuc = Number(sayi1) + Number(sayi2);
+                document.getElementById("sonuc").innerHTML = sonuc;
+            }
         </script>
     </body>
 </html>
